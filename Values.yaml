@@ -1,0 +1,100 @@
+# Valores padrão para o library chart
+# Isso serve como documentação dos valores esperados
+
+# Configurações básicas
+replicaCount: 1
+nameOverride: ""
+fullnameOverride: ""
+
+# Configuração da imagem
+image:
+  repository: nginx
+  pullPolicy: IfNotPresent
+  tag: ""
+
+imagePullSecrets: []
+
+# Service Account
+serviceAccount:
+  create: true
+  annotations: {}
+  name: ""
+
+# Labels comuns aplicados a todos os recursos
+commonLabels: {}
+
+# Annotations para pods
+podAnnotations: {}
+
+# Security Context para pods
+podSecurityContext: {}
+
+# Security Context para containers
+securityContext: {}
+
+# Configuração do Service
+service:
+  type: ClusterIP
+  port: 80
+  targetPort: 8080
+  annotations: {}
+
+# Configuração do Ingress
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: chart-example.local
+      paths:
+        - path: /
+          pathType: ImplementationSpecific
+  tls: []
+
+# ConfigMap
+configMap:
+  enabled: false
+  data: {}
+
+# Variáveis de ambiente
+env: {}
+envFrom: []
+
+# Health checks
+healthcheck:
+  enabled: true
+  liveness:
+    path: /health
+    initialDelaySeconds: 30
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 3
+  readiness:
+    path: /ready
+    initialDelaySeconds: 5
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 3
+
+# Recursos
+resources: {}
+
+# Autoscaling
+autoscaling:
+  enabled: false
+  minReplicas: 1
+  maxReplicas: 100
+  targetCPUUtilizationPercentage: 80
+
+# Node selector
+nodeSelector: {}
+
+# Tolerations
+tolerations: []
+
+# Affinity
+affinity: {}
+
+# Volumes e Volume Mounts
+volumes: []
+volumeMounts: []

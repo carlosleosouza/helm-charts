@@ -1,0 +1,8 @@
+apiVersion: v2
+name: common-library
+description: Library chart com templates comuns para aplicações
+type: library
+version: 1.0.0
+maintainers:
+  - name: DevOps Team
+    email: devops@empresa.com

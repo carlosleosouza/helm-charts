@@ -1,0 +1,16 @@
+apiVersion: v1
+entries:
+  common-library:
+  - apiVersion: v2
+    created: "2025-06-11T21:27:44.715653021-03:00"
+    description: Library chart com templates comuns para aplicações
+    digest: eb690ea5310304770674d49e70f18ba5fb40ea8c3800a3c068d5e7203d8f7041
+    maintainers:
+    - email: devops@empresa.com
+      name: DevOps Team
+    name: common-library
+    type: library
+    urls:
+    - https://github.com/carlosleosouza/helm-charts.git/common-library-1.0.0.tgz
+    version: 1.0.0
+generated: "2025-06-11T21:27:44.715009974-03:00"
